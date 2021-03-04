@@ -24,10 +24,10 @@ app.use(session({
 //Routes
 const loginRoute=require("./routes/loginRoutes");
 const registerRoute=require("./routes/registerRoutes");
-
+const logoutRoute=require("./routes/logout");
 app.use("/login",loginRoute)
 app.use("/register",registerRoute)
-
+app.use("/logout",logoutRoute)
 
 const server=app.listen(port,()=>{
     console.log("Server is listening on port"+port);

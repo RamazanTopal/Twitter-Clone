@@ -1,5 +1,3 @@
 extends layouts/main-layout.pug
 block content 
-    h1 Merhaba #{userLoggedIn.firstName}
-    div hi 
-    div bye
+    +createPostForm(userLoggedIn)
