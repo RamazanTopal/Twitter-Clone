@@ -25,10 +25,15 @@ app.use(session({
 const loginRoute=require("./routes/loginRoutes");
 const registerRoute=require("./routes/registerRoutes");
 const logoutRoute=require("./routes/logout");
+//Api Routes
+const postApiRoute=require("./routes/api/posts");
+
+
 app.use("/login",loginRoute)
 app.use("/register",registerRoute)
 app.use("/logout",logoutRoute)
 
+app.use("/api/posts",postApiRoute)
 const server=app.listen(port,()=>{
     console.log("Server is listening on port"+port);
 })
