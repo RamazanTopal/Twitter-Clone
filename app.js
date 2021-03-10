@@ -41,7 +41,8 @@ const server=app.listen(port,()=>{
 app.get('/',middleware.requireLogin,(req,res,next)=>{
     var payload={
         pageTitle:"Home",
-        userLoggedIn:req.session.user
+        userLoggedIn:req.session.user,
+        userLoggedJs:JSON.stringify(req.session.user)
     }
     res.render('home',payload)
 })
